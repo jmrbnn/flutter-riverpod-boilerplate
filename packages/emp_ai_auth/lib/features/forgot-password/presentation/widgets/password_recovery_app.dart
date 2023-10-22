@@ -1,6 +1,5 @@
 import 'package:emp_ai_auth/core/shared/utils/general_utils.dart';
 import 'package:emp_ai_auth/features/auth/domain/entities/oauth/oauth_mfa_response_model.dart';
-import 'package:emp_ai_ds/utils/color_utils.dart';
 import 'package:emp_ai_ds/utils/type_util.dart';
 import 'package:emp_ai_ds/utils/utils.dart';
 import 'package:emp_ai_ds/widgets/app_button.dart';

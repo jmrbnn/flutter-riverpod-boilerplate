@@ -36,7 +36,7 @@ class _RiverpodDemoScreenState extends ConsumerState<RiverpodDemoScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Counter app'),
+        title: const Text('Counter app'),
       ),
       body: Center(
         child: Column(

@@ -1,15 +1,12 @@
 import 'package:emp_ai_ds/services/theme_service_riverpod.dart';
 import 'package:emp_ai_ds/utils/text_util.dart';
 import 'package:emp_ai_ds/utils/utils.dart';
-import 'package:emp_ai_ds/widgets/app_button.dart';
 import 'package:emp_ai_ds/widgets/app_card.dart';
-import 'package:emp_ai_ds/widgets/app_custom_button.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/domain/entities/weather_details.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/presentation/widgets/cards/condition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:unicons/unicons.dart';
 
 class SelectedForecast extends ConsumerStatefulWidget {
   final Forecastday? forecast;

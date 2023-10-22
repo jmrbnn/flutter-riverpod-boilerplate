@@ -8,7 +8,6 @@ import 'package:emp_ai_auth/features/forgot-password/presentation/providers/forg
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class PasswordRecoveryInputCode extends ConsumerStatefulWidget {
@@ -38,7 +37,7 @@ class _PasswordRecoveryInputCodeState
 
   @override
   Widget build(BuildContext context) {
-    var state = ref.watch(forgotPasswordProvider);
+    // var state = ref.watch(forgotPasswordProvider);
 
     ref.listen(
       forgotPasswordProvider.select((value) => value),

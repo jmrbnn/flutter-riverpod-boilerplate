@@ -1,5 +1,5 @@
-import 'package:emp_ai_auth/core/shared/data/remote/network_service.dart';
-import 'package:emp_ai_auth/core/shared/domain/providers/dio_network_service_provider.dart';
+import 'package:emp_ai_flutter_boilerplate/src/core/shared/data/remote/network_service.dart';
+import 'package:emp_ai_flutter_boilerplate/src/core/shared/domain/providers/dio_network_service_provider.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/data/repositories/weather_repository_impl.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/data/weather_datasource.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/data/weather_remote_datasource.dart';
