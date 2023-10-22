@@ -7,7 +7,7 @@ class WeatherDemoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SingleChildScrollView(child: Center(child: WeatherApp())),
+      body: Center(child: SingleChildScrollView(child: WeatherApp())),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/domain/entities/weather_details.dart';
+import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/presentation/providers/state/weather_state.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/presentation/providers/weather_provider.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/presentation/widgets/cards/condition.dart';
 import 'package:emp_ai_flutter_boilerplate/src/features/weather-demo/presentation/widgets/cards/forecast.dart';
@@ -13,6 +14,9 @@ class WeatherApp extends ConsumerStatefulWidget {
 }
 
 class _WeatherAppState extends ConsumerState<WeatherApp> {
+  WeatherDetails? weatherDetails;
+  Current? current;
+
   @override
   void initState() {
     super.initState();
@@ -24,15 +28,25 @@ class _WeatherAppState extends ConsumerState<WeatherApp> {
 
   @override
   Widget build(BuildContext context) {
-    final WeatherDetails? weather = ref.watch(weatherProvider);
-    final Current? current = weather?.current;
+    var state = ref.watch(weatherProvider);
+
+    ref.listen(weatherProvider.select((value) => value), ((previous, next) {
+      if (next is Success) {
+        weatherDetails = next.weather;
+        current = weatherDetails?.current;
+      }
+    }));
 
     return Wrap(
       children: [
         CurrentWeatherApp(
           current: current,
+          state: state,
         ),
-        ForecastWidget(weather: weather),
+        ForecastWidget(
+          weather: weatherDetails,
+          state: state,
+        ),
       ],
     );
   }
